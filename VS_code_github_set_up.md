@@ -32,7 +32,7 @@ If you are faced with a prompt to set your global git credentials/username/email
 4. Type in: `git config --global user.name "___"` with your GitHub username inside the quotation marks (instead of the underscores), press return.
 5. You should now be able to proceed with committing and syncing your changes.
 
-![Git config1](Images/vs_code_source_control.jpg "Configuring global Git credentials in VS Code terminal.")
+![Git config1](Images/vs_code_source_control_terminal.jpg "Configuring global Git credentials in VS Code terminal.")
 ![Git config2](Images/git_config.jpg "Configuring global Git credentials in VS Code terminal.")
 
 
