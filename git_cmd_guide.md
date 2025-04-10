@@ -239,7 +239,7 @@ If you only want to keep track of your code locally, you don't need to use GitHu
 
 To create a new repo on GitHub, log in and go to the GitHub home page. You should see a green "+" and then click "New repository" button.
 
-<img src="Images/Create_repo_github.png" height=300>
+<img src="Images/create_repo_github.png" height=300>
 
 When you're done filling out the information, press the "Create repository" button to make your new repo.
 
