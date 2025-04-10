@@ -70,7 +70,7 @@ One of the most frequent commands is List Directory or known as ls. With this co
 You can also retrieve the details of the listed content such as the directory date (created), directory permission, and the directory owners. To do so, type ls -l or simply ll.
 
 > Listing directory using Git Bash on Windows
-<img src="Images/Git_bash_list.PNG" height=200>
+<img src="Images/git_bash_list.png" height=200>
 
 The ls command, however, will only work in a UNIX shell. You can run ls command in Ubuntu and Mac, but not in Windows. In Windows, type dir command instead.
 The link to install Git at the start of this document includes **Git Bash**. Git Bash is an application for Microsoft Windows environments which provides an emulation layer (Bash - Unix Shell) for a Git command line.
