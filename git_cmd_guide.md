@@ -70,7 +70,7 @@ One of the most frequent commands is List Directory or known as ls. With this co
 You can also retrieve the details of the listed content such as the directory date (created), directory permission, and the directory owners. To do so, type ls -l or simply ll.
 
 > Listing directory using Git Bash on Windows
-<img src="Images/git_bash_list.png" height=200>
+<img src="Images/git_bash_list.png" height=350>
 
 The ls command, however, will only work in a UNIX shell. You can run ls command in Ubuntu and Mac, but not in Windows. In Windows, type dir command instead.
 The link to install Git at the start of this document includes **Git Bash**. Git Bash is an application for Microsoft Windows environments which provides an emulation layer (Bash - Unix Shell) for a Git command line.
@@ -152,7 +152,7 @@ On GitHub, navigate to the main page of the repository.
 
 Above the list of files, click "⬇️ Code".
 
-<img src="Images/download_code.png" height=150>
+<img src="Images/download_code.png" height=350>
 
 To clone the repository using HTTPS, under "Clone with HTTPS", click 📋. To clone the repository using an SSH key, including a certificate issued by your organization's SSH certificate authority, click **Use SSH**, then click 📋.
 
@@ -162,7 +162,7 @@ Open Git Bash and change the current working directory to the location where you
 
 Type **git clone**, and then paste the URL you copied earlier. Then press Enter to create your local clone.
 
-<img src="Images/git_clone.png" height=200>
+<img src="Images/git_clone.png" height=350>
 
 These files should now be copied to your local directory (folder).
 
@@ -226,7 +226,7 @@ git commit -m 'Submitting assignment'
 git push
 ```
 > Adding, commiting and pushing a file
-<img src="Images/git_add_commit_push.png" height=300>
+<img src="Images/git_add_commit_push.png" height=450>
 
 
 After the push command, you should see a message that says "Everything up to date" or "Pushed to origin". This means that your changes have been successfully pushed to GitHub.
@@ -239,7 +239,7 @@ If you only want to keep track of your code locally, you don't need to use GitHu
 
 To create a new repo on GitHub, log in and go to the GitHub home page. You should see a green "+" and then click "New repository" button.
 
-<img src="Images/create_repo_github.png" height=300>
+<img src="Images/create_repo_github.png" height=450>
 
 When you're done filling out the information, press the "Create repository" button to make your new repo.
 
