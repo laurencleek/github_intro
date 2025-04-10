@@ -27,7 +27,7 @@ Note: Git for Windows comes with its own command prompt (Git Bash) that, besides
 
 The general workflow of GitHub is represented in the diagram below. The black arrows are the commands that can be directly inputted into a console
 
-<img src="Images/git_workflow.PNG" height=200>
+<img src="Images/git_workflow.png" height=200>
 
 For instructions on commit messages, refer to *Commit_Message_Guidelines.md*
 
