@@ -152,17 +152,17 @@ On GitHub, navigate to the main page of the repository.
 
 Above the list of files, click "⬇️ Code".
 
-<img src="Images/download_code.PNG" height=150>
+<img src="Images/download_code.png" height=150>
 
 To clone the repository using HTTPS, under "Clone with HTTPS", click 📋. To clone the repository using an SSH key, including a certificate issued by your organization's SSH certificate authority, click **Use SSH**, then click 📋.
 
-<img src="Images/download_ssh.PNG" height=300>
+<img src="Images/download_ssh.png" height=300>
 
 Open Git Bash and change the current working directory to the location where you want the cloned directory (**cd**).
 
 Type **git clone**, and then paste the URL you copied earlier. Then press Enter to create your local clone.
 
-<img src="Images/git_clone.PNG" height=200>
+<img src="Images/git_clone.png" height=200>
 
 These files should now be copied to your local directory (folder).
 
@@ -175,7 +175,7 @@ To begin, open up a terminal and move to where you want to place the project on 
 To initialize a git repository in the root of the folder, run the **git init** command.
 
 > Git init using the cmd line
-<img src="Images/git_init.PNG" height=30>
+<img src="Images/git_init.png" height=30>
 
 ### Add a New File to the Repo
 
@@ -226,7 +226,7 @@ git commit -m 'Submitting assignment'
 git push
 ```
 > Adding, commiting and pushing a file
-<img src="Images/git_add_commit_push.PNG" height=300>
+<img src="Images/git_add_commit_push.png" height=300>
 
 
 After the push command, you should see a message that says "Everything up to date" or "Pushed to origin". This means that your changes have been successfully pushed to GitHub.
@@ -239,7 +239,7 @@ If you only want to keep track of your code locally, you don't need to use GitHu
 
 To create a new repo on GitHub, log in and go to the GitHub home page. You should see a green "+" and then click "New repository" button.
 
-<img src="Images/Create_repo_github.PNG" height=300>
+<img src="Images/Create_repo_github.png" height=300>
 
 When you're done filling out the information, press the "Create repository" button to make your new repo.
 
