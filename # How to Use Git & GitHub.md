@@ -206,3 +206,9 @@ To practice these steps:
 | `git commit -m "some message"` | Commit (i.e. record) staged changes |
 | `git push` | Upload local changes to remote repository |
 | `git pull` | If files changed online, update local repository first |
+
+
+
+Other resources
+https://zenodo.org/records/3369466
+https://happygitwithr.com/
