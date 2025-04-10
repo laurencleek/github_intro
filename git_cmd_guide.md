@@ -1,13 +1,4 @@
-# Three Ways to Use GitHub: Command Line
-This document lays out the main ways that GitHub can be used.
-
-This guide covers everything you need to know to interact with GitHub. The topics covered in this document are:
-
-1. Command Line / Terminal: Intro and Syntax
-2. Cloning a existing repository
-3. Working from your local (personal) computer
-4. Creating a repo on GitHub
-5. Working with branches (Advanced Difficulty)
+# Using GitHub via the Command Line
 
 ## 1. Command Line
 The very first thing you need to do if you are using GitHub from the command (cmd) line is to install Git. Even if it’s already installed, it’s probably a good idea to update to the latest version. The link below 
@@ -244,3 +235,6 @@ To create a new repo on GitHub, log in and go to the GitHub home page. You shoul
 When you're done filling out the information, press the "Create repository" button to make your new repo.
 
 GitHub will ask if you want to create a new repo from scratch or if you want to add a repo you have created locally. In this case, since we've already created a new repo locally, we want to push that onto GitHub so follow the "....or push an existing repository from the command line" section.
+
+
+Questions or troubles? E-mail: laurencaroline.leek@eui.eu
