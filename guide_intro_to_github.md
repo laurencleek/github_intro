@@ -14,49 +14,22 @@ Git is a *distributed* VCS, meaning each collaborator’s machine has the full r
 
 ---
 
-## Installing Git
+## A practical guide
+Below is a practical guide to using Git and GitHub. It is divided into three sections:
+1. **Command Line**: Basic commands and setup for Git and GitHub. 
+2. **VS Code**: Integrating Git with Visual Studio Code for a more user-friendly experience.
+
 ## 1. Command Line
-The very first thing you need to do if you are using GitHub from the command (cmd) line is to install Git. Even if it’s already installed, it’s probably a good idea to update to the latest version. The link below 
-ains all the information you need to install Git on Windows, Mac, and Linux.
-
-Install Git: https://git-scm.com/book/en/v2/Getting-Started-Installing-Git
-
-Or more specific, check out: 
-
-1. **macOS**  
-   - Open your Terminal and type `git`. macOS will typically prompt you to install developer tools if Git isn’t already installed.  
-   - Alternatively, download from: [git-scm.com/download/mac](https://git-scm.com/download/mac)
-
-2. **Windows**  
-   - Download Git from: [git-scm.com/download/win](https://git-scm.com/download/win)  
-   - Or install the [GitHub Desktop](https://desktop.github.com/) application, which includes Git automatically.
-
-3. **Create a GitHub Account**  
-   - Sign up at [https://github.com/](https://github.com/).  
-   - (Optional) Request student benefits: [https://education.github.com/benefits?type=student](https://education.github.com/benefits?type=student)
-
-**TIP:** When the Git installer prompts you "Select Components", ensure that *Windows Explorer Integration* is selected, along with Git Bash Here and Git GUI Here. This will allow you to use the context menu to open Git Bash in a specific location, without having to navigate to the directory your repository is in every time.
-
-<img src="Images/git_bash_components.jpg" height=400>
-
-Windows Explorer Intergration is selected by default, so don't panic if you have already installed Git! If you un-selected this option, or it is not appearing on your context menu, the simpliest solution is to re-download and re-install Git making sure this option is selected. 
-
-Note: Git for Windows comes with its own command prompt (Git Bash) that, besides git commands, has some useful Unix commands (and it looks better than the Windows default prompt).
-
----
 
 ### Introduction to Command Line
-
-The general workflow of GitHub is represented in the diagram below. The black arrows are the commands that can be directly inputted into a console
-
-<img src="Images/git_workflow.png" height=200>
 
 To use Git we'll be using the terminal/command line. If you’re not familiar with using the cmd line, some basic commands for navigating the file system are below. 
 
 ```
 #  Use “cd” to change your current directory to the destination specified within the command.
 
-# You can navigate directly to the sub-directory. My sub-directory is called "GitHub_SDS" which stands for Social Data Science.
+# You can navigate directly to the sub-directory. My sub-directory is called "github_intro".
+
 cd Users\laurenleek\Documents\github_intro
 
 # If your file path has a space in it, wrap the file path in quotes.
@@ -100,24 +73,47 @@ $ This is a fourth
 ```
 After each command line you need to press Enter (or Return) in order to execute it.
 On the command line (terminal) on your machine, the text before the $ or > is the user, Computer Name (after @) and (often) the directory that you are currently working in. The commands are typed after the > or $. In the example below laurenleek is the user and github_intro is the folder. Notice that slashes go in different directions in Windows, **but not in a Git Bash shell**.
-```
-# Windows
-C:\Users\laurenleek\Documents\github_intro>
 
-# Mac
-laurenleek-MacBook-Pro: ~Documents/github_intro$
-
-# Bash Shell (MING64 stands for Minimalist GNU for Windows)
-laurenleek@Lauren MING64 ~/laurenleek/Documents/github_intro$
 ```
 You will encounter errors if you use folder names with spaces in them as this will be read as two separate arguments in the command line. If you have spaces in you folder name, you can rename the folder/file in the usual way (i.e. using file explorer) or you can wrap the file name in quotation marks or inverted commas in the specified directory.
-```
-# This won’t work
-cd users/lauren brooleekke/programs
 
-# This will work
-cd "user/lauren leek/programs"
 ```
+
+### Installing Git
+The very first thing you need to do if you are using GitHub from the command (cmd) line is to install Git. Even if it’s already installed, it’s probably a good idea to update to the latest version. The link below 
+ains all the information you need to install Git on Windows, Mac, and Linux.
+
+Install Git: https://git-scm.com/book/en/v2/Getting-Started-Installing-Git
+
+Or more specific, check out: 
+
+1. **macOS**  
+   - Open your Terminal and type `git`. macOS will typically prompt you to install developer tools if Git isn’t already installed.  
+   - Alternatively, download from: [git-scm.com/download/mac](https://git-scm.com/download/mac)
+
+2. **Windows**  
+   - Download Git from: [git-scm.com/download/win](https://git-scm.com/download/win)  
+   - Or install the [GitHub Desktop](https://desktop.github.com/) application, which includes Git automatically.
+
+3. **Create a GitHub Account**  
+   - Sign up at [https://github.com/](https://github.com/).  
+   - (Optional) Request student benefits: [https://education.github.com/benefits?type=student](https://education.github.com/benefits?type=student)
+
+**TIP:** When the Git installer prompts you "Select Components", ensure that *Windows Explorer Integration* is selected, along with Git Bash Here and Git GUI Here. This will allow you to use the context menu to open Git Bash in a specific location, without having to navigate to the directory your repository is in every time.
+
+<img src="Images/git_bash_components.jpg" height=400>
+
+Windows Explorer Intergration is selected by default, so don't panic if you have already installed Git! If you un-selected this option, or it is not appearing on your context menu, the simpliest solution is to re-download and re-install Git making sure this option is selected. 
+
+Note: Git for Windows comes with its own command prompt (Git Bash) that, besides git commands, has some useful Unix commands (and it looks better than the Windows default prompt).
+
+---
+
+
+The general workflow of GitHub is represented in the diagram below. The black arrows are the commands that can be directly inputted into a console
+
+<img src="Images/git_workflow.png" height=200>
+
 When using git from the command line, you also need to start each command with the word “git” so the computer knows it is meant to be using git. Just putting “pull” or “push” etc. will result in an error
 
 ``` bash
@@ -125,6 +121,8 @@ git pull
 git status
 git clone
 ```
+
+
 
 ## Creating Your First Repository
 
@@ -444,7 +442,7 @@ If you are faced with a prompt to set your global git credentials/username/email
 ![Git configure - type credentials in the Terminal ](Images/git_config.jpg "Configuring global Git credentials in VS Code terminal.")
 
 ---
-
+## Finally
 If you get into problems: try first using your LLM of choice (that's what I do to solve most problems!), if you cannot resolve it feel free to get in touch at laurencaroline.leek@eui.eu with an explanation and screenshot of the issue.
 
 
