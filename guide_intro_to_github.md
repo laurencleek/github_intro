@@ -1,10 +1,39 @@
-# Using GitHub via the Command Line
+# How to Use Git & GitHub
 
+This guide provides a concise overview of using Git and GitHub for version control, based on the essential steps and concepts introduced in the course materials .
+
+---
+
+## What is Version Control?
+Version control systems (VCS) track changes in files over time, letting you:
+- See who made which changes.
+- Revert to earlier versions if needed.
+- Collaborate seamlessly with others.
+
+Git is a *distributed* VCS, meaning each collaborator’s machine has the full repository history. GitHub is a popular online service for hosting Git repositories and facilitating collaboration.
+
+---
+
+## Installing Git
 ## 1. Command Line
 The very first thing you need to do if you are using GitHub from the command (cmd) line is to install Git. Even if it’s already installed, it’s probably a good idea to update to the latest version. The link below 
 ains all the information you need to install Git on Windows, Mac, and Linux.
 
 Install Git: https://git-scm.com/book/en/v2/Getting-Started-Installing-Git
+
+Or more specific, check out: 
+
+1. **macOS**  
+   - Open your Terminal and type `git`. macOS will typically prompt you to install developer tools if Git isn’t already installed.  
+   - Alternatively, download from: [git-scm.com/download/mac](https://git-scm.com/download/mac)
+
+2. **Windows**  
+   - Download Git from: [git-scm.com/download/win](https://git-scm.com/download/win)  
+   - Or install the [GitHub Desktop](https://desktop.github.com/) application, which includes Git automatically.
+
+3. **Create a GitHub Account**  
+   - Sign up at [https://github.com/](https://github.com/).  
+   - (Optional) Request student benefits: [https://education.github.com/benefits?type=student](https://education.github.com/benefits?type=student)
 
 **TIP:** When the Git installer prompts you "Select Components", ensure that *Windows Explorer Integration* is selected, along with Git Bash Here and Git GUI Here. This will allow you to use the context menu to open Git Bash in a specific location, without having to navigate to the directory your repository is in every time.
 
@@ -14,30 +43,14 @@ Windows Explorer Intergration is selected by default, so don't panic if you have
 
 Note: Git for Windows comes with its own command prompt (Git Bash) that, besides git commands, has some useful Unix commands (and it looks better than the Windows default prompt).
 
-**Make sure you have setup a GitHub account before advancing to the next stage of this walkthrough**
+---
+
+### Introduction to Command Line
 
 The general workflow of GitHub is represented in the diagram below. The black arrows are the commands that can be directly inputted into a console
 
 <img src="Images/git_workflow.png" height=200>
 
-For instructions on commit messages, refer to *Commit_Message_Guidelines.md*
-
-If you are having trouble installing git on Mac visit this website: https://git-scm.com/download/mac
-
-```
-# First try running the command below in terminal
-$ brew install git
-
-# If this does not work, try running the command below in your terminal.
-# If you a prompted for a password, enter the password you use to log into you account (no password will appear on screen)
-# Press enter (return) when you have entered your password, and again when prompted by the intaller.
-$ /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
-
-# Once the install has finished, trying running the git install command again (below).
-$ brew install git
-```
-
-### Introduction to Command Line
 To use Git we'll be using the terminal/command line. If you’re not familiar with using the cmd line, some basic commands for navigating the file system are below. 
 
 ```
@@ -113,29 +126,35 @@ git status
 git clone
 ```
 
-### Configuring Git
-**Read: Telling git/GitHub who you are**
+## Creating Your First Repository
 
-When you start working with git on the command line, you might recive the message "\*\*\*Please tell me who you are.". This slightly odd message is just git asking for your GitHub credentials so that you can login and uploaded (push) changes to the right location, with the appropiate permissions. **If you run the commands below, you will only need to configure the details for git once.**
+1. Log in to your GitHub account and click on your user icon in the top-right corner.  
+2. Navigate to **Your repositories** → **New**.  
+3. Choose a **name** (e.g., `firstrepo`).  
+4. Select **Private** if you want it to be accessible only to you (and those you share access with).  
+5. Choose **Add a README file** and select an appropriate `.gitignore` template (for example, “R” if you are storing R code).  
+6. Click **Create repository**.
 
-``` bash
-git config --global user.email "insert your GitHub email here"
-git config --global user.name "insert you GitHub user name here"
+Your repository now exists on GitHub.
 
-# So for me, this would look like:
-git config --global user.email laurencaroline.leek@eui.eu
-git config --global user.name laurencleek
+---
+
+## Configuring Git Locally
+
+Open a terminal (macOS) or Git Bash (Windows), then:
+
+```bash
+# Set your username (replace with your real name)
+git config --global user.name "Your Name"
+
+# Set your email address (use the one associated with your GitHub account)
+git config --global user.email "your@email.com"
 ```
-**Remember if there are spaces in your username you need to wrap it in speech marks**. SO if my user name was *Lauren Leek* I was need to write the user.name as detailed below, other wise each word will be understoond by git as seperate arguements.
-
-``` bash
-git config --global user.email laurencaroline.leek@eui.eu
-git config --global user.name "Lauren Leek"
-```
+Then navigate to the folder where you would like to locate the
+repository on your computer with cd (change directory)
 
 
 ## 2. Cloning a Existing Repository
-**Read: Downloading Github Repo to my Computer**
 
 Cloning a repository pulls down a full copy of all the repository data that GitHub has at that point in time, including all versions of every file and folder for the project. At any point, you can push your changes to the remote repository on GitHub, or pull other people's changes from GitHub. For more information, see "Working From Your Local Computer" below.
 
@@ -156,6 +175,38 @@ Type **git clone**, and then paste the URL you copied earlier. Then press Enter 
 <img src="Images/git_clone.png" height=350>
 
 These files should now be copied to your local directory (folder).
+
+The next step is to copy (clone) the online repository to your computer:
+
+1. On your repository page on GitHub:
+   - Click on the green "Code" button
+   - Copy the HTTPS URL
+
+2. In the command line, enter:
+   ```bash
+   git clone <URL>
+   ```
+   (Replace `<URL>` with the copied repository URL)
+
+3. Authentication:
+   - You will be prompted for your GitHub username and password
+   - Note: For password authentication, you'll need to create a personal access token
+   - Some users may instead get a popup window for authentication - in this case you can skip creating an access token
+
+   To create a personal access token:
+   1. On GitHub, click on your profile icon in the upper right corner
+   2. Go to Settings → Developer settings → Personal access tokens → Generate new token
+   3. Configure the token:
+      - Give it a descriptive name (e.g. "command line") 
+      - Choose an expiration date
+      - Select "repo" scope (allows access to private and public repositories)
+      - Click "Generate token"
+   4. Copy the generated token immediately (it will only be shown once)
+   5. Return to the command line:
+      - Enter your GitHub username
+      - Use the token as your password when prompted
+   
+   Once authenticated, your Git and GitHub setup is complete and the repository will be cloned locally. You won't need to authenticate again until the token expires.
 
 ## 3. Working From Your Local (Personal) Computer
 ### Creating a Repo
@@ -237,4 +288,169 @@ When you're done filling out the information, press the "Create repository" butt
 GitHub will ask if you want to create a new repo from scratch or if you want to add a repo you have created locally. In this case, since we've already created a new repo locally, we want to push that onto GitHub so follow the "....or push an existing repository from the command line" section.
 
 
-Questions or troubles? E-mail: laurencaroline.leek@eui.eu
+## Creating a file
+
+1. We will now create a new file in the repository and log these changes
+
+2. Create a new file:
+   - Using RStudio or a text editor (e.g. VS Code - download at https://code.visualstudio.com/)
+   - Add a file called `somecode.R` into the repository folder
+
+3. Navigate to the repository:
+   ```bash
+   cd firstrepo
+   ```
+
+4. You are now ready to commit the changes made to the repository
+
+## Committing changes
+
+1. Check for changes:
+   ```bash
+   git status
+   ```
+   Make sure you are in the repository folder on your computer
+
+2. Add changes to staging area:
+   ```bash
+   git add .
+   ```
+   - You can also add specific files instead of using the dot
+   - WARNING: Be very careful using the dot to add files!
+
+3. Commit the changes:
+   ```bash
+   git commit -m "added a code sample"
+   ```
+
+4. View commit history:
+   ```bash
+   git log
+   ```
+
+To practice these steps:
+1. Add another line of code to your file
+2. Repeat the above process (status → add → commit)
+3. Check the commit history again with `git log`
+
+## Pushing changes to the remote repository
+
+1. Store changes in the remote repository:
+   ```bash
+   git push
+   ```
+
+2. Review changes in GitHub:
+   - Go to repository page on GitHub
+   - Click clock symbol next to 'commits' in upper right
+   - Click on commit hash (e.g. '472cb9d') to see code changes
+
+3. Get latest changes:
+   ```bash
+   git pull
+   ```
+   Run this if others have updated the remote repository
+
+
+## Additional Git/GitHub Concepts
+
+### Forking
+- Creates your own copy of someone else's repository on GitHub
+- Changes you push only affect your fork, not the original repository
+- Useful for contributing to open source projects
+- Different from cloning which creates a local copy
+
+### Branches
+- Parallel versions of code that branch off from main codebase
+- Allow development of features without affecting main code
+- Create a new branch:
+  ```bash
+  git branch feature-name
+  git checkout feature-name
+  ```
+- Or create and checkout in one command:
+  ```bash 
+  git checkout -b feature-name
+  ```
+
+### Merging
+- Combines changes from different branches
+- Merge a branch into current branch:
+  ```bash
+  git merge branch-name
+  ```
+- May need to resolve conflicts if same files changed in both branches
+
+### Pull Requests
+- GitHub feature to propose changes from your fork/branch
+- Steps to create:
+  1. Push changes to your fork/branch
+  2. Go to original repo on GitHub
+  3. Click "New Pull Request"
+  4. Select branches to compare
+  5. Add description of changes
+  6. Submit pull request
+- Repository maintainers can review, comment, and merge
+
+### Review of Key Commands
+
+| Command | Description |
+|---------|-------------|
+| `git clone ...` | Download online repository to local computer |
+| `git status` | See status of files in repository |
+| `git add .` | Stage all changes made (alternatively add distinct file names to be staged) |
+| `git commit -m "some message"` | Commit (i.e. record) staged changes |
+| `git push` | Upload local changes to remote repository |
+| `git pull` | If files changed online, update local repository first |
+
+
+# Git and VS Code Integration: Setup guide
+
+From the VS Code welcome screen, you should be able to see and use the “Clone Git Repository” option. If not, you will need to install Git.
+
+![VS Code welcome screen](Images/vs_code_welcome.jpg "VS Code welcome screen")
+
+## Installing Git
+### Mac
+1. Open the “Terminal” application on your Mac.
+2. Type into the window `xcode-select –install` and hit return
+3. You will be prompted to download and install Xcode command line developer tools, proceed with this.
+4. Restart VS Code / your computer.
+5. The “Clone Git Repository” option should now appear on the welcome screen.
+
+### Windows
+1. Download and run the installer for the right system type [here](https://git-scm.com/download/win) (you will probably need 64-bit, check [here](https://support.microsoft.com/en-us/windows/32-bit-and-64-bit-windows-frequently-asked-questions-c6ca9541-8dce-4d48-0415-94a3faa2e13d) if unsure).
+2. Restart VS Code / your computer.
+3. The “Clone Git Repository” option should now appear on the welcome screen.
+
+### Linux
+1. Follow the instructions [here](https://git-scm.com/download/linux) for your preferred Linux distribuition and package manager. This will probably involve running a command in the terminal e.g. `apt-get install git`.
+2. Restart VS Code / your computer.
+3. The “Clone Git Repository” option should now appear on the welcome screen.
+
+## Setting global Git username and email
+
+If you are faced with a prompt to set your global git credentials/username/email:
+
+1. Select OK/proceed.
+2. In the bottom pane that appears, select TERMINAL. (If you can’t see this, select "Terminal" from the "View" option in the top menu bar).
+3. Type in: `git config --global user.email "___"` with your email address associated with GitHub inside the quotation marks (instead of the underscores), press return.
+4. Type in: `git config --global user.name "___"` with your GitHub username inside the quotation marks (instead of the underscores), press return.
+5. You should now be able to proceed with committing and syncing your changes.
+
+![Git configure: open the Terminal](Images/vs_code_source_control_terminal.jpg "Configuring global Git credentials in VS Code terminal.")
+
+
+![Git configure - type credentials in the Terminal ](Images/git_config.jpg "Configuring global Git credentials in VS Code terminal.")
+
+---
+
+If you get into problems: try first using your LLM of choice (that's what I do to solve most problems!), if you cannot resolve it feel free to get in touch at laurencaroline.leek@eui.eu with an explanation and screenshot of the issue.
+
+
+Other resources:
+
+https://zenodo.org/records/3369466
+
+https://happygitwithr.com/
+
