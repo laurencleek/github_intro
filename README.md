@@ -12,7 +12,7 @@ This repository contains learning materials for getting started with Git and Git
   - Advanced Git Concepts
   - VS Code Integration
 
-- **[Presentation Slides](slides_intro_to_github (2).pdf)**: Introduction to Git and GitHub concepts
+- **[Presentation Slides](slides_intro_to_github.pdf)**: Introduction to Git and GitHub concepts
   - Basic Version Control
   - Git Commands
   - GitHub Features
