@@ -12,29 +12,27 @@ This repository contains learning materials for getting started with Git and Git
   - Advanced Git Concepts
   - VS Code Integration
 
-- **Presentation Slides**: Introduction to Git and GitHub concepts
+- **[Presentation Slides](slides_intro_to_github (2).pdf)**: Introduction to Git and GitHub concepts
   - Basic Version Control
   - Git Commands
   - GitHub Features
   - Best Practices
 
-- **Exercises**: Hands-on practice materials
+- **[Exercises](exercises_github_class.pdf)**: Hands-on practice materials
   - Basic Git Commands
   - Repository Management
   - Branching and Merging
   - Collaboration Workflows
 
-- **Exercise Solutions**: Step-by-step solutions to all exercises
+- **[Exercise Solutions](exercises_github_answers.pdf)**: Step-by-step solutions to all exercises
 
 ## Getting Started
-
 
 1. Review the guide in [guide_intro_to_github.md](guide_intro_to_github.md)
 
 2. Follow along with the slides
 
 3. Complete the exercises to practice your skills
-
 
 ## Contributing
 
